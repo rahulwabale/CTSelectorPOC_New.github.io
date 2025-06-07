@@ -2,48 +2,55 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ticketing System - RPA Credit Bank</title>
-  <link rel="stylesheet" href="styles.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CT Selector POC - Full Form</title>
+  <link rel="stylesheet" href="styles.css"/>
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
-  <div class="container">
-    <h1>Ticketing System</h1>
-    <div class="form-group">
-      <label for="firstname">First Name</label>
-      <i class="fas fa-user"></i>
-      <input type="text" id="firstname" class="form-input" />
-    </div>
-    <div class="form-group">
-      <label for="surname">Surname</label>
-      <i class="fas fa-user"></i>
-      <input type="text" id="surname" class="form-input" />
-    </div>
-    <div class="form-group">
-      <label for="email">Email</label>
-      <i class="fas fa-envelope"></i>
-      <input type="email" id="email" class="form-input" />
-    </div>
-    <div class="form-group">
-      <label for="details">Details</label>
-      <i class="fas fa-comment"></i>
-      <textarea id="details" class="form-textarea"></textarea>
-    </div>
-    <div class="form-group">
-      <label for="country">Country</label>
-      <select id="country">
-        <option value="India">India</option>
-        <option value="USA">USA</option>
-        <option value="UK">UK</option>
-      </select>
-    </div>
-    <button id="submitBtn" class="btn">Submit</button>
-    <button id="refreshBtn" class="btn">Refresh</button>
-    <div class="ticket-output">
-      Ticket Number: <span id="ticket-number"></span>
-    </div>
-  </div>
-  <script src="script.js"></script>
+  <header>
+    <h1>CT Selector POC</h1>
+  </header>
+  <main>
+    <section class="form-section">
+      <form id="ticket-form">
+        <div class="row">
+          <div class="form-control">
+            <label for="firstname">First Name</label>
+            <input type="text" id="firstname" placeholder="Enter your first name"/>
+          </div>
+          <div class="form-control">
+            <label for="surname">Surname</label>
+            <input type="text" id="surname" placeholder="Enter your surname"/>
+          </div>
+        </div>
+        <div class="form-control">
+          <label for="email">Email</label>
+          <input type="email" id="email" placeholder="Enter your email"/>
+        </div>
+        <div class="form-control">
+          <label for="details">Details</label>
+          <textarea id="details" placeholder="Enter ticket details here..."></textarea>
+        </div>
+        <div class="form-control">
+          <label for="country">Select Country</label>
+          <select id="country">
+            <option value="">--Select--</option>
+            <option value="India">India</option>
+            <option value="USA">USA</option>
+            <option value="Germany">Germany</option>
+          </select>
+        </div>
+        <div class="buttons">
+          <button type="button" id="submitBtn">Submit</button>
+          <button type="button" id="refreshBtn">Refresh</button>
+        </div>
+        <div class="ticket-output">
+          Ticket Number: <span id="ticket-number"></span>
+        </div>
+      </form>
+    </section>
+  </main>
 </body>
+<script src="script.js"></script>
 </html>
