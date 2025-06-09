@@ -19,6 +19,16 @@
             <label for="firstname">First Name</label>
             <input type="text" id="firstname" placeholder="Enter your first name"/>
           </div>
+            <script>
+              function submitTicket() {
+                const ticketId = crypto.randomUUID();
+                document.getElementById("ticketConfirmation").innerText = "Ticket ID: " + ticketId;
+              }
+          
+              function refreshPage() {
+                window.location.reload();
+              }
+            </script>
           <div class="form-control">
             <label for="surname">Surname</label>
             <input type="text" id="surname" placeholder="Enter your surname"/>
